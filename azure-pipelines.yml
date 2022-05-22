@@ -18,13 +18,21 @@ strategy:
       python.version: '3.6'
     Python37:
       python.version: '3.7'
-  maxParallel: 1
+#WvdW
+#  maxParallel: 1
+
+# WvdW
+# steps:
+# - task: UsePythonVersion@0
+#   inputs:
+#     versionSpec: '$(python.version)'
+#   displayName: 'Use Python $(python.version)'
 
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+    versionSpec: '3.7'
+  displayName: 'Use Python 3.7'
 
 - script: |
     python -m pip install --upgrade pip
